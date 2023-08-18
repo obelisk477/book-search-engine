@@ -2,13 +2,13 @@ const { User } = require('../models');
 
 const resolvers = {
   Query: {
-    user: async (parent, {name}) => {
-      return User.findOne({ name });
+    user: async (parent, {username}) => {
+      return User.findOne({ username });
     },
   },
   Mutation: {
-    createUser: async (parent, args) => {
-
+    saveBook: async (parent, args) => {
+      return true
     }
   },
 };

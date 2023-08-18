@@ -1,15 +1,21 @@
 const typeDefs = `#graphql
-  type User {
+  type Book {
     _id: ID
     name: String!
   }
 
+  type User {
+    _id: ID
+    username: String!
+    savedBooks: [Book]
+  }
+
   type Query {
-    user(name: String!): User
+    user(username: String!): User
   }
 
   type Mutation {
-    createUser(name: String!): User
+    saveBook(name: String!): User
   }
 `;
 
